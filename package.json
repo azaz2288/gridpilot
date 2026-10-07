@@ -1,0 +1,23 @@
+{
+  "name": "gridpilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && node tools/serve.mjs",
+    "build": "tsc -b && node tools/build.mjs",
+    "test": "node --experimental-strip-types --test src/csv.test.ts",
+    "preview": "node tools/serve.mjs"
+  },
+  "dependencies": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "typescript": "5.9.3",
+    "esbuild": "0.28.2",
+    "@types/node": "24.7.2"
+  }
+}

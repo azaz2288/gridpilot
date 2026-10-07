@@ -1,0 +1,202 @@
+:root {
+  font:
+    14px Inter,
+    "Segoe UI",
+    "Microsoft YaHei",
+    sans-serif;
+  color: #242d44;
+  background: #f3f4f9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header {
+  height: 75px;
+  background: #fff;
+  border-bottom: 1px solid #dce0eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+}
+header strong {
+  font-size: 24px;
+  color: #4554a4;
+}
+header span,
+.eyebrow {
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: #7c849b;
+}
+main {
+  max-width: 1500px;
+  margin: auto;
+  padding: 30px 4vw;
+}
+.intro h1 {
+  font-size: clamp(28px, 4vw, 43px);
+  margin: 12px 0;
+}
+.intro p {
+  color: #737d92;
+  line-height: 1.8;
+}
+.toolbar,
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+button,
+input,
+select,
+.file {
+  font: inherit;
+  padding: 10px 14px;
+  border: 1px solid #d5d9e7;
+  border-radius: 7px;
+  background: white;
+  color: #313e60;
+}
+button,
+.file {
+  cursor: pointer;
+}
+button:hover,
+.file:hover {
+  background: #e9ebfb;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.file {
+  background: #4b5db2;
+  color: #fff;
+}
+.file input {
+  display: none;
+}
+.filters {
+  border-top: 1px solid #dbe0ed;
+}
+.filters > input {
+  flex: 1;
+  min-width: 180px;
+}
+.filters label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.filters span {
+  color: #737d92;
+}
+.status {
+  min-height: 20px;
+  color: #5d6897;
+}
+.grid-shell {
+  overflow: hidden;
+  border: 1px solid #d2d8e8;
+  border-radius: 10px;
+  background: #fff;
+}
+.headers,
+.row {
+  display: grid;
+}
+.headers {
+  height: 46px;
+  background: #e9edf8;
+  will-change: transform;
+}
+.headers button {
+  text-align: left;
+  border-radius: 0;
+  border: 0;
+  border-right: 1px solid #d2d8e8;
+  font-weight: 650;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.viewport {
+  height: 55vh;
+  min-height: 300px;
+  max-height: 650px;
+  overflow: auto;
+  outline: none;
+}
+.viewport:focus-visible {
+  box-shadow: inset 0 0 0 2px #6072cd;
+}
+.spacer {
+  position: relative;
+}
+.row {
+  position: absolute;
+  height: 44px;
+  left: 0;
+}
+.cell {
+  padding: 12px;
+  border-right: 1px solid #edf0f7;
+  border-bottom: 1px solid #e8ebf3;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.row:nth-child(even) {
+  background: #f9faff;
+}
+.cell.selected {
+  box-shadow: inset 0 0 0 2px #697bd1;
+  background: #edf0ff;
+}
+.cell input {
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+  margin-top: -5px;
+}
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+}
+footer {
+  padding: 23px 0;
+  line-height: 1.9;
+  color: #7a8296;
+}
+@media (max-width: 600px) {
+  header span {
+    display: none;
+  }
+  main {
+    padding: 20px 15px;
+  }
+  .toolbar {
+    gap: 8px;
+  }
+  .toolbar button,
+  .file {
+    padding: 9px;
+    font-size: 12px;
+  }
+  .filters > input {
+    flex-basis: 100%;
+  }
+  .viewport {
+    height: 52vh;
+  }
+  .intro h1 {
+    font-size: 28px;
+  }
+}
